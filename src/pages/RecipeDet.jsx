@@ -12,11 +12,15 @@ const RecipeDet = () => {
   const deleteHandler = () => {
     const filterData = data.filter((f) => f.id != params.id);
     setData(filterData);
+
+        localStorage.setItem("recipe", JSON.stringify(filterData));
+
+
     toast.success("Recipe Deleted");
   };
 
   return recipe ? (
-    <section className="flex flex-col justify-between lg:flex-row overflow-auto px-[3%]">
+    <section className="flex flex-col justify-between lg:flex-row overflow-auto p-[3%]">
       <div className="h-60 lg:w-[36vw] lg:h-[55vh]">
         <img
           src={recipe.image}

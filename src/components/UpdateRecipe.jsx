@@ -11,27 +11,30 @@ const UpdateRecipe = () => {
   const recipe = data.find((recipe) => params.id == recipe.id);
   const { register, handleSubmit } = useForm({
     defaultValues: {
-      title: recipe.title,
-      chef: recipe.chef,
-      image: recipe.image,
-      desc: recipe.desc,
-      instruction: recipe.instruction,
-      ingredients: recipe.ingredients,
-      catagory: recipe.catagory,
+      title: recipe?.title,
+      chef: recipe?.chef,
+      image: recipe?.image,
+      desc: recipe?.desc,
+      instruction: recipe?.instruction,
+      ingredients: recipe?.ingredients,
+      catagory: recipe?.catagory,
     },
   });
 
-  const submitHandler = (recipe) => {
+  const updateHandler = (recipe) => {
     const index = data.findIndex((recipe) => params.id == recipe.id);
     const copyData = [...data];
     copyData[index] = { ...copyData[index], ...recipe };
     setData(copyData);
+
+    localStorage.setItem("recipe", JSON.stringify(copyData));
+
     toast.success("Recipe Updated!");
     navigate(-1);
   };
   return (
     <form
-      onSubmit={handleSubmit(submitHandler)}
+      onSubmit={handleSubmit(updateHandler)}
       className="flex flex-col gap-2 w-full lg:w-3/5 bg-[#372D27] rounded-xl shadow-lg p-2 mt-5 md:mb-[17vw] lg:mb-5 border border-[#4f3c32]"
     >
       <h2 className="text-2xl font-semibold">Update Recipe</h2>

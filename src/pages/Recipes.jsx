@@ -10,7 +10,7 @@ const Recipes = () => {
   });
 
   return (
-    <section className="grid gap-6 px-[3%] grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
+    <section className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] p-[3%]">
       {data.length > 0 ? (
         renderRecipe
       ) : (

@@ -1,5 +1,5 @@
 const About = () => {
-  return <section className="px-[3%]">About</section>;
+  return <section className="p-[3%]">About</section>;
 };
 
 export default About;

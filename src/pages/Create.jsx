@@ -10,20 +10,24 @@ const Create = () => {
   const { data, setData } = useContext(recipeContext);
   const { register, handleSubmit, reset } = useForm();
 
-  const submitHandler = (recipe) => {
+  const createHandler = (recipe) => {
     recipe.id = nanoid();
+    const copyData = [...data];
+    copyData.push(recipe);
+    setData(copyData);
 
-    setData([...data, recipe]);
+    localStorage.setItem("recipe", JSON.stringify(copyData));
+
     reset();
     toast.success("New resipe created!");
     navigate("/recipes");
   };
 
   return (
-    <div className="px-4 lg:px-[5%] flex justify-center items-center">
+    <div className="p-[3%] flex justify-center items-center lg:min-h-screen">
       <form
-        onSubmit={handleSubmit(submitHandler)}
-        className="flex flex-col gap-5 md:gap-10 lg:gap-3 md:p-10 w-full lg:w-3/5 rounded-2xl shadow-2xs p-5 bg-[#372D27] "
+        onSubmit={handleSubmit(createHandler)}
+        className="flex flex-col gap-5 md:gap-10 lg:gap-3 md:p-10 w-full max-w-100 rounded-2xl shadow-2xs p-5 bg-[#372D27] "
       >
         <h2 className="text-4xl font-semibold text-center text-white">
           Create Recipe
@@ -77,7 +81,7 @@ const Create = () => {
         <div className="flex flex-col sm:flex-row justify-between gap-4 mt-4">
           <select
             {...register("catagory")}
-            className="border border-gray-400 outline-none py-2 px-3 text-sm rounded-md"
+            className="border bg-[#372D27]  border-gray-400 outline-none py-2 px-3 text-sm rounded-md"
           >
             <option value="Breakfast">Breakfast</option>
             <option value="Lunch">Lunch</option>
@@ -87,7 +91,7 @@ const Create = () => {
 
           <button
             type="submit"
-            className="bg-[#F4722B] hover:bg-blue-700 text-white px-6 py-2 rounded-md text-sm transition-transform active:scale-95"
+            className="bg-[#F4722B] hover:bg-[#f4712bc4] cursor-pointer text-white px-6 py-2 rounded-md text-sm transition-transform active:scale-95"
           >
             Save Update
           </button>
