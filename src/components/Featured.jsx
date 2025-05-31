@@ -2,16 +2,16 @@ import { useContext } from "react";
 import { recipeContext } from "../context/RecipeContext";
 import RecipeCard from "../components/RecipeCard";
 
-const Recipes = () => {
+const Featured = () => {
   const { data } = useContext(recipeContext);
 
-  const renderRecipe = data.map((recipe) => {
-    return <RecipeCard key={recipe.id} recipe={recipe} />;
-  });
+const renderRecipe = data.slice(0, 8).map((recipe) => {
+  return <RecipeCard key={recipe.id} recipe={recipe} />;
+});
 
   return (
-    <section className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] px-[3%] pb-10 pt-30 relative">
-      <h2 className="text-center absolute top-10 w-full text-2xl md:text-4xl">Explore Our Delicious Recipes</h2>
+    <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] w-screen p-[3%] relative pt-30">
+      <h2 className="text-center absolute top-10 w-full text-3xl">Featured Recipes</h2>
       {data.length > 0 ? (
         renderRecipe
       ) : (
@@ -19,7 +19,8 @@ const Recipes = () => {
           No Recipe Found😞
         </h2>
       )}
-    </section>
+    </div>
   );
 };
-export default Recipes;
+
+export default Featured;

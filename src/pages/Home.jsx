@@ -1,7 +1,13 @@
+import Featured from "../components/Featured";
+import Hero from "../components/Hero";
+
 const Home = () => {
   return (
-    <section className="p-[3%]">Home</section>
-  )
-}
+    <section className="relative">
+      <Hero />
+      <Featured />
+    </section>
+  );
+};
 
-export default Home
+export default Home;

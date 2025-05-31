@@ -33,81 +33,84 @@ const UpdateRecipe = () => {
     navigate(-1);
   };
   return (
-    <form
-      onSubmit={handleSubmit(updateHandler)}
-      className="flex flex-col gap-2 w-full lg:w-3/5 bg-[#372D27] rounded-xl shadow-lg p-2 mt-5 md:mb-[17vw] lg:mb-5 border border-[#4f3c32]"
-    >
-      <h2 className="text-2xl font-semibold">Update Recipe</h2>
+    <div>
+      <div className="h-full w-full bg-black opacity-70 absolute top-0 left-0 "></div>
+      <form
+        onSubmit={handleSubmit(updateHandler)}
+        className="flex flex-col gap-1 w-[90vw] max-w-[500px] bg-[#372D27] rounded-xl shadow-lg py-2 px-10 border-[#4f3c32] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      >
+        <h2 className="text-2xl text-center font-semibold">Update Recipe</h2>
 
-      <input
-        {...register("image")}
-        className="border-b-2 outline-none p-2 text-sm"
-        type="url"
-        placeholder="Enter image URL"
-      />
+        <input
+          {...register("image")}
+          className="border-b-2 outline-none p-2 text-sm"
+          type="url"
+          placeholder="Enter image URL"
+        />
 
-      <input
-        {...register("title")}
-        className="border-b-2 outline-none p-2 text-sm"
-        type="text"
-        placeholder="Recipe title"
-      />
+        <input
+          {...register("title")}
+          className="border-b-2 outline-none p-2 text-sm"
+          type="text"
+          placeholder="Recipe title"
+        />
 
-      <textarea
-        {...register("desc")}
-        className="border-b-2 outline-none p-2 text-sm"
-        rows={3}
-        placeholder="Write recipe description"
-      ></textarea>
+        <textarea
+          {...register("desc")}
+          className="border-b-2 outline-none p-2 text-sm"
+          rows={2}
+          placeholder="Write recipe description"
+        ></textarea>
 
-      <textarea
-        {...register("instruction")}
-        className="border-b-2 outline-none p-2 text-sm"
-        rows={3}
-        placeholder="Write instructions"
-      ></textarea>
+        <textarea
+          {...register("instruction")}
+          className="border-b-2 outline-none p-2 text-sm"
+          rows={2}
+          placeholder="Write instructions"
+        ></textarea>
 
-      <textarea
-        {...register("ingredients")}
-        className="border-b-2 outline-none p-2 text-sm"
-        rows={3}
-        placeholder="List ingredients"
-      ></textarea>
+        <textarea
+          {...register("ingredients")}
+          className="border-b-2 outline-none p-2 text-sm"
+          rows={2}
+          placeholder="List ingredients"
+        ></textarea>
 
-      <input
-        {...register("chef")}
-        className="border-b-2 outline-none p-2 text-sm"
-        type="text"
-        placeholder="Chef name"
-      />
+        <input
+          {...register("chef")}
+          className="border-b-2 outline-none p-2 text-sm"
+          type="text"
+          placeholder="Chef name"
+        />
 
-      <div className="flex justify-between items-center mt-4">
-        <select
-          {...register("catagory")}
-          className="border border-gray-400 rounded-md px-4 py-2 text-sm outline-none"
-        >
-          <option value="Breakfast">Breakfast</option>
-          <option value="Lunch">Lunch</option>
-          <option value="Supper">Supper</option>
-          <option value="Dinner">Dinner</option>
-        </select>
-
-        <div className="flex gap-3">
-          <Link
-            to={-1}
-            className="bg-gray-500 text-white px-4 py-2 rounded  text-sm"
+        <div className="flex justify-between items-center mt-4">
+          <select
+            {...register("catagory")}
+            className="border bg-[#372D27] border-gray-400 rounded-md px-4 py-2 text-sm outline-none"
           >
-            Back
-          </Link>
-          <button
-            type="submit"
-            className="bg-[#F4722B] cursor-pointer text-white px-5 py-1 rounded text-sm"
-          >
-            Save Changes
-          </button>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Supper">Supper</option>
+            <option value="Dinner">Dinner</option>
+          </select>
+
+          <div className="flex gap-3">
+            <Link
+              to={-1}
+              className="bg-gray-500 text-white px-4 py-2 rounded  text-sm"
+            >
+              Back
+            </Link>
+            <button
+              type="submit"
+              className="bg-[#F4722B] cursor-pointer text-white px-5 py-1 rounded text-sm"
+            >
+              Save Changes
+            </button>
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 };
 

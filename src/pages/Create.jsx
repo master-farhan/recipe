@@ -53,21 +53,21 @@ const Create = () => {
           {...register("desc")}
           className="border-b border-gray-400 outline-none py-2 px-1 text-sm"
           placeholder="Write recipe description"
-          rows={3}
+          rows={2}
         ></textarea>
 
         <textarea
           {...register("instruction")}
           className="border-b border-gray-400 outline-none py-2 px-1 text-sm"
           placeholder="Write instructions"
-          rows={4}
+          rows={2}
         ></textarea>
 
         <textarea
           {...register("ingredients")}
           className="border-b border-gray-400 outline-none py-2 px-1 text-sm"
           placeholder="Ingredients of your recipe"
-          rows={3}
+          rows={2}
         ></textarea>
 
         <input
