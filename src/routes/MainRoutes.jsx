@@ -9,7 +9,7 @@ import UpdateRecipe from "../components/UpdateRecipe";
 const MainRoutes = () => {
   return (
     <Routes>
-      <Route path="/recipe" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/recipes" element={<Recipes />} />
       <Route path="/recipes/details/:id" element={<RecipeDet />}>
         <Route path="update" element={<UpdateRecipe />} />

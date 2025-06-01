@@ -36,14 +36,14 @@ const RecipeDet = () => {
 
         <Link
           to={`update`}
-          className="bg-[#F4722B] pt-1 pb-[5px] text-white  px-5 rounded active:scale-98 mr-5"
+          className="bg-[#F4722B] hover:bg-[#F4722Baa] pt-1 pb-[5px] text-white  px-5 rounded active:scale-98 mr-5 transition duration-300"
         >
           Update
         </Link>
         <Link
           to="/recipes"
           onClick={deleteHandler}
-          className="bg-red-700 pt-1 pb-[5px] text-white px-5 rounded active:scale-98"
+          className="bg-red-600 hover:bg-red-900 pt-1 pb-[5px] text-white px-5 rounded active:scale-98 transition duration-300"
         >
           Delate
         </Link>

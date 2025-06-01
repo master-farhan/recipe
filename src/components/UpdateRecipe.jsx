@@ -37,7 +37,7 @@ const UpdateRecipe = () => {
       <div className="h-full w-full bg-black opacity-70 absolute top-0 left-0 "></div>
       <form
         onSubmit={handleSubmit(updateHandler)}
-        className="flex flex-col gap-1 w-[90vw] max-w-[500px] bg-[#372D27] rounded-xl shadow-lg py-2 px-10 border-[#4f3c32] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        className="flex flex-col gap-1 w-[90vw] max-w-[500px] bg-[#372D27] rounded-xl shadow-lg py-2 px-2 md:px-10 border-[#4f3c32] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       >
         <h2 className="text-2xl text-center font-semibold">Update Recipe</h2>
 
@@ -97,13 +97,13 @@ const UpdateRecipe = () => {
           <div className="flex gap-3">
             <Link
               to={-1}
-              className="bg-gray-500 text-white px-4 py-2 rounded  text-sm"
+              className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded  text-sm transition duration-300"
             >
               Back
             </Link>
             <button
               type="submit"
-              className="bg-[#F4722B] cursor-pointer text-white px-5 py-1 rounded text-sm"
+              className="bg-[#F4722B] hover:bg-[#F4722Baa] cursor-pointer text-white px-5 py-1 rounded text-sm transition duration-300"
             >
               Save Changes
             </button>

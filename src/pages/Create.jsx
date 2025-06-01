@@ -27,7 +27,7 @@ const Create = () => {
     <div className="p-[3%] flex justify-center items-center lg:min-h-screen">
       <form
         onSubmit={handleSubmit(createHandler)}
-        className="flex flex-col gap-5 md:gap-10 lg:gap-3 md:p-10 w-full max-w-100 rounded-2xl shadow-2xs p-5 bg-[#372D27] "
+        className="flex flex-col gap-5 md:gap-10 lg:gap-3 w-full max-w-100 rounded-2xl shadow-2xs md:px-10 p-5 bg-[#372D27]"
       >
         <h2 className="text-4xl font-semibold text-center text-white">
           Create Recipe
@@ -91,7 +91,7 @@ const Create = () => {
 
           <button
             type="submit"
-            className="bg-[#F4722B] hover:bg-[#f4712bc4] cursor-pointer text-white px-6 py-2 rounded-md text-sm transition-transform active:scale-95"
+            className="cursor-pointer text-white px-6 py-2 rounded-md text-sm active:scale-95 bg-[#F4722B] hover:bg-[#f4712bc4] transition duration-300"
           >
             Save Update
           </button>
