@@ -27,7 +27,7 @@ const Create = () => {
     <div className="p-[3%] flex justify-center items-center lg:min-h-screen">
       <form
         onSubmit={handleSubmit(createHandler)}
-        className="flex flex-col gap-5 md:gap-10 lg:gap-3 w-full max-w-100 rounded-2xl shadow-2xs md:px-10 p-5 bg-[#372D27]"
+        className="flex flex-col gap-7 md:gap-15 lg:gap-5 w-full max-w-100 rounded-2xl shadow-2xs md:px-10 p-5 bg-[#372D27]"
       >
         <h2 className="text-4xl font-semibold text-center text-white">
           Create Recipe
@@ -60,13 +60,6 @@ const Create = () => {
           {...register("instruction")}
           className="border-b border-gray-400 outline-none py-2 px-1 text-sm"
           placeholder="Write instructions"
-          rows={2}
-        ></textarea>
-
-        <textarea
-          {...register("ingredients")}
-          className="border-b border-gray-400 outline-none py-2 px-1 text-sm"
-          placeholder="Ingredients of your recipe"
           rows={2}
         ></textarea>
 

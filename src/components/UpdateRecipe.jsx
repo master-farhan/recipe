@@ -16,7 +16,6 @@ const UpdateRecipe = () => {
       image: recipe?.image,
       desc: recipe?.desc,
       instruction: recipe?.instruction,
-      ingredients: recipe?.ingredients,
       catagory: recipe?.catagory,
     },
   });
@@ -67,13 +66,6 @@ const UpdateRecipe = () => {
           className="border-b-2 outline-none p-2 text-sm"
           rows={2}
           placeholder="Write instructions"
-        ></textarea>
-
-        <textarea
-          {...register("ingredients")}
-          className="border-b-2 outline-none p-2 text-sm"
-          rows={2}
-          placeholder="List ingredients"
         ></textarea>
 
         <input
