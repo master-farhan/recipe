@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="bg-[#372D27] text-gray-100">
+    <footer className="bg-[#ece3e3] text-black">
       <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Logo and Description */}
         <div>
-          <h2 className="text-2xl font-bold text-white text-center md:text-start ">
+          <h2 className="text-2xl font-bold text-center md:text-start ">
             🍽️ RecipeHub
           </h2>
           <p className="text-sm mt-2 text-center md:text-start">
@@ -72,7 +72,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="text-center text-sm text-gray-400 py-4 border-t border-gray-800white">
+      <div className="text-center text-sm text-gray-600 py-4 border-t border-gray-800white">
         &copy; {new Date().getFullYear()} RecipeHub by Farhan. All rights
         reserved.
       </div>

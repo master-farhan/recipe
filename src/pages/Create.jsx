@@ -27,9 +27,9 @@ const Create = () => {
     <div className="p-[3%] flex justify-center items-center lg:min-h-screen">
       <form
         onSubmit={handleSubmit(createHandler)}
-        className="flex flex-col gap-7 md:gap-15 lg:gap-5 w-full max-w-100 rounded-2xl shadow-2xs md:px-10 p-5 bg-[#372D27]"
+        className="flex flex-col gap-7 md:gap-15 lg:gap-5 w-full max-w-100 rounded-2xl shadow-2xs md:px-10 p-5 bg-[#ece3e3]"
       >
-        <h2 className="text-4xl font-semibold text-center text-white">
+        <h2 className="text-4xl font-semibold text-center">
           Create Recipe
         </h2>
 
@@ -74,7 +74,7 @@ const Create = () => {
         <div className="flex flex-col sm:flex-row justify-between gap-4 mt-4">
           <select
             {...register("catagory")}
-            className="border bg-[#372D27]  border-gray-400 outline-none py-2 px-3 text-sm rounded-md"
+            className="border bg-[#ece3e3]  border-gray-400 outline-none py-2 px-3 text-sm rounded-md"
           >
             <option value="Breakfast">Breakfast</option>
             <option value="Lunch">Lunch</option>

@@ -10,7 +10,7 @@ const Recipes = () => {
   });
 
   return (
-    <section className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] px-[3%] pb-10 pt-30 relative">
+    <section className="px-4 lg:px-10 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pb-10 pt-30 relative">
       <h2 className="text-center absolute top-10 w-full text-2xl md:text-4xl">Explore Our Delicious Recipes</h2>
       {data.length > 0 ? (
         renderRecipe

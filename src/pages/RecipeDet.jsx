@@ -19,7 +19,7 @@ const RecipeDet = () => {
   };
 
   return recipe ? (
-    <section className="flex flex-col justify-between lg:flex-row overflow-auto p-[3%] relative w-screen">
+    <section className="flex flex-col justify-between lg:flex-row overflow-auto p-[3%] relative w-screen md:min-h-3/5  lg:min-h-5/6">
       <div className="h-60 lg:w-[36vw] lg:h-[55vh]">
         <img
           src={recipe.image}

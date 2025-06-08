@@ -16,7 +16,7 @@ const Home = () => {
     <section className="relative">
       <Hero onSearch={(term) => setSearchTerm(term)} />
       <h2 className="text-center text-3xl mt-10 mb-7">Featured Recipes</h2>
-      <div className="p-4 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="p-4 lg:p-10 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {filteredRecipes.map((recipe) => (
           <RecipeCard key={recipe.id} recipe={recipe} />
         ))}
