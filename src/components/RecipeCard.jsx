@@ -6,7 +6,7 @@ const RecipeCard = (props) => {
   return (
     <Link
       to={`/recipes/details/${id}`}
-      className="flex flex-col justify-between gap-2 border border-[#d3d0cd] bg-[#e0d9d4] rounded-xl shadow p-6"
+      className="flex flex-col justify-between gap-2 border border-[#d3d0cd] bg-[#f2f2f2] rounded-xl shadow p-6"
     >
       <h1 className="text-3xl font-medium px-2">{title}</h1>
       <img src={image} className="w-full h-30 object-cover" />
