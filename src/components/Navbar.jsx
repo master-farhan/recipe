@@ -1,24 +1,29 @@
 import { NavLink } from "react-router-dom";
 
+const navItems = [
+  { path: "/", label: "Home" },
+  { path: "/recipes", label: "Recipes" },
+  { path: "/about", label: "About" },
+  { path: "/create-resipe", label: "Create Recipe" },
+];
+
 const Navbar = () => {
   return (
-    <div className="flex justify-center items-center md:gap-10 gap-1 lg:gap-20 lg:py-5 bg-white py-3 lg:px-[3%]">
-      <NavLink to="/" className={(e) => (e.isActive ? "navA" : "nav")}>
-        Home
-      </NavLink>
-      <NavLink to="/recipes" className={(e) => (e.isActive ? "navA" : "nav")}>
-        Recipes
-      </NavLink>
-      <NavLink to="/about" className={(e) => (e.isActive ? "navA" : "nav")}>
-        About
-      </NavLink>
-      <NavLink
-        to="/create-resipe"
-        className={(e) => (e.isActive ? "navA" : "nav")}
-      >
-        Create Recipe
-      </NavLink>
-    </div>
+    <nav className="flex justify-center items-center gap-2 md:gap-10 lg:gap-20 py-3 lg:py-5 lg:px-[3%] text-back">
+      {navItems.map(({ path, label }) => (
+        <NavLink
+          key={path}
+          to={path}
+          className={({ isActive }) =>
+            `px-2 font-semibold pb-[1px] rounded trans ${
+              isActive ? "bg-primary text-white" : "bg-transparent"
+            }`
+          }
+        >
+          {label}
+        </NavLink>
+      ))}
+    </nav>
   );
 };
 

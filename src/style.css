@@ -6,14 +6,14 @@ body {
 
 @theme {
   --color-primary: #2c8535;
-  --color-back: #000;
-  --color-grow: #fff;
-  --color-accent: #ccc;
+  --color-back: #fff;
+  --color-grow: #242424;
+  --color-accent: #444444;
 }
 
-.nav,
+/* .nav,
 .navA {
-  border-radius: 5px;
+  border-radius: 3px;
   letter-spacing: 0.5px;
   padding: 2px 10px 4px;
   font-weight: 600;
@@ -22,7 +22,7 @@ body {
 .navA {
   background: #2c8535;
   color: #fff;
-}
+} */
 
 .trans{
   transition: all .3s;

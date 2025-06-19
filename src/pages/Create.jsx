@@ -29,7 +29,7 @@ const Create = () => {
         onSubmit={handleSubmit(createHandler)}
         className="flex flex-col gap-7 md:gap-15 lg:gap-5 w-full max-w-100 rounded-2xl shadow-2xs md:px-10 p-5 bg-grow"
       >
-        <h2 className="text-4xl font-semibold text-center">
+        <h2 className="text-4xl text-primary font-semibold text-center">
           Create Recipe
         </h2>
 

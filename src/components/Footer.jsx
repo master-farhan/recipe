@@ -1,80 +1,77 @@
 import { Link } from "react-router-dom";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  const quickLinks = [
+    { label: "Home", to: "/" },
+    { label: "About", to: "/about" },
+    { label: "All Recipes", to: "/recipes" },
+  ];
+
+  const socialLinks = [
+    {
+      label: "GitHub",
+      href: "https://github.com/master-farhan",
+    },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/md-farhan-sadik-467340316/",
+    },
+    {
+      label: "Portfolio",
+      href: "https://master-farhan.github.io/studio/",
+    },
+  ];
+
   return (
-    <footer className="bg-[#f2f2f2] text-black">
+    <footer className="bg-grow text-back mt-20">
       <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Logo and Description */}
-        <div>
-          <h2 className="text-2xl font-bold text-center md:text-start ">
-            🍽️ RecipeHub
-          </h2>
-          <p className="text-sm mt-2 text-center md:text-start">
+        <div className="text-center md:text-left">
+          <h2 className="text-2xl font-bold">🍽️ RecipeHub</h2>
+          <p className="text-sm mt-2">
             Discover simple, delicious, and homemade recipes from around the
             world.
           </p>
         </div>
 
         {/* Quick Links */}
-        <div className="flex flex-col items-center">
-          <div>
-            <h3 className="font-semibold mb-2">Quick Links</h3>
-            <ul className="space-y-1 text-sm">
-              <li>
-                <a href="/recipe" className="hover:underline">
-                  Home
-                </a>
-              </li>
-              <li>
-                <Link to="/about" className="hover:underline">
-                  About
+        <div className="text-center">
+          <h3 className="font-semibold mb-2">Quick Links</h3>
+          <ul className="space-y-1 text-sm">
+            {quickLinks.map(({ label, to }) => (
+              <li key={label}>
+                <Link to={to} className="hover:underline">
+                  {label}
                 </Link>
               </li>
-              <li>
-                <Link to="/recipes" className="hover:underline">
-                  All Recipes
-                </Link>
-              </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
         </div>
 
         {/* Social Media */}
-        <div className="flex flex-col items-center">
-          <div>
-            <h3 className="font-semibold mb-2">Connect Us</h3>
-            <ul className="space-y-1 text-sm">
-              <li>
-                <Link
-                  to="https://github.com/master-farhan"
-                  target="blank"
+        <div className="text-center">
+          <h3 className="font-semibold mb-2">Connect With Us</h3>
+          <ul className="space-y-1 text-sm">
+            {socialLinks.map(({ label, href }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:underline"
                 >
-                  GitHub
-                </Link>
+                  {label}
+                </a>
               </li>
-              <li>
-                <Link
-                  to="https://www.instagram.com/farhansadik0760/"
-                  target="blank"
-                  className="hover:underline"
-                >
-                  Instagram
-                </Link>
-              </li>
-              <li>
-                <Link to="#" target="blank" className="hover:underline">
-                  Facebook
-                </Link>
-              </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
         </div>
       </div>
 
-      <div className="text-center text-sm text-gray-600 py-4 border-t border-gray-800white">
-        &copy; {new Date().getFullYear()} RecipeHub by Farhan. All rights
-        reserved.
+      <div className="text-center text-sm text-back/50 py-4 border-t border-gray-300">
+        &copy; {currentYear} RecipeHub by Farhan. All rights reserved.
       </div>
     </footer>
   );

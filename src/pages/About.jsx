@@ -35,7 +35,7 @@ const About = () => {
           href=" https://master-farhan.github.io/studio/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block  text-grow px-6 py-2 rounded-full bg-primary trans hover:bg-primary/90"
+          className="inline-block  text-back px-6 py-2 rounded font-semibold bg-primary trans hover:bg-primary/90"
         >
           Visit My Portfolio
         </a>

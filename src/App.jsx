@@ -4,7 +4,7 @@ import MainRoutes from "./routes/MainRoutes";
 
 const App = () => {
   return (
-    <div className="App w-screen h-screen font-thin  overflow-x-hidden">
+    <div className="App w-screen h-screen font-thin  overflow-x-hidden bg-gradient-to-br to-grow from-accent text-back">
       <Navbar />
       <MainRoutes />
       <Footer/>
