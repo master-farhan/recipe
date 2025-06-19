@@ -3,7 +3,7 @@ const About = () => {
     <section className="p-[3%]">
       <div className="flex gap-[5%] flex-col-reverse md:flex-row">
         <div className="md:w-[55vw]">
-          <h2 className="text-4xl font-bold my-5">About Me</h2>
+          <h2 className="text-4xl font-bold my-5 text-primary">About Me</h2>
           <p className="text-lg leading-relaxed mb-5">
             Hello! I'm <span className="font-semibold">MD Farhan Sadik</span>, a
             passionate front-end web developer from Bangladesh. I love turning
@@ -35,7 +35,7 @@ const About = () => {
           href=" https://master-farhan.github.io/studio/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block  text-white px-6 py-2 rounded-full bg-[#ff7023] transition duration-300"
+          className="inline-block  text-grow px-6 py-2 rounded-full bg-primary trans hover:bg-primary/90"
         >
           Visit My Portfolio
         </a>

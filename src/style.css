@@ -4,11 +4,11 @@ body {
   overflow-x: hidden;
 }
 
-.App {
-  background: #fff9f9;
-  color: #000000;
-  overflow-x: hidden;
-  font-weight: 500;
+@theme {
+  --color-primary: #2c8535;
+  --color-back: #000;
+  --color-grow: #fff;
+  --color-accent: #ccc;
 }
 
 .nav,
@@ -20,6 +20,10 @@ body {
   transition: all 0.3s;
 }
 .navA {
-  background: #f4722b;
+  background: #2c8535;
   color: #fff;
+}
+
+.trans{
+  transition: all .3s;
 }

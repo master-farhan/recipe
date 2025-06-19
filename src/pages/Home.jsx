@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
-import { useContext, useState } from "react";
 import RecipeCard from "../components/RecipeCard";
+import { useContext, useState } from "react";
 import { recipeContext } from "../context/RecipeContext";
 
 const Home = () => {
@@ -15,9 +15,9 @@ const Home = () => {
   return (
     <section className="relative">
       <Hero onSearch={(term) => setSearchTerm(term)} />
-      <h2 className="text-center text-3xl mt-15 mb-7">Featured Recipes</h2>
+      <h2 className="text-center text-3xl mt-15 mb-7 font-semibold text-primary">Featured Recipes</h2>
       <div className="p-4 lg:p-10 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        {filteredRecipes.map((recipe) => (
+        {filteredRecipes.slice(0,3).map((recipe) => (
           <RecipeCard key={recipe.id} recipe={recipe} />
         ))}
       </div>

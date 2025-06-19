@@ -36,14 +36,14 @@ const RecipeDet = () => {
 
         <Link
           to={`update`}
-          className="bg-[#F4722B] hover:bg-[#F4722Baa] pt-1 pb-[5px] text-white  px-5 rounded active:scale-98 mr-5 transition duration-300"
+          className="bg-primary hover:bg-primary/90 trans pt-1 pb-[5px] text-grow  px-5 rounded active:scale-98 mr-5 transition duration-300"
         >
           Update
         </Link>
         <Link
           to="/recipes"
           onClick={deleteHandler}
-          className="bg-red-600 hover:bg-red-900 pt-1 pb-[5px] text-white px-5 rounded active:scale-98 transition duration-300"
+          className="bg-red-600 hover:bg-red-500 pt-1 pb-[5px] text-grow px-5 rounded active:scale-98 trans"
         >
           Delate
         </Link>
@@ -51,7 +51,7 @@ const RecipeDet = () => {
       <Outlet />
     </section>
   ) : (
-    <small className="absolute top-1/2 left-1/2 -translate-1/2 text-5xl animate-pulse whitespace-nowrap tracking-wider">
+    <small className="absolute top-1/2 left-1/2 -translate-1/2 text-5xl animate-pulse growspace-nowrap tracking-wider">
       Loding...
     </small>
   );
