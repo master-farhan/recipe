@@ -89,15 +89,15 @@ const UpdateRecipe = () => {
           <div className="flex gap-3">
             <Link
               to={-1}
-              className="bg-gray-500 text-grow px-4 py-2 rounded  text-sm transition duration-300"
+              className="bg-gray-500 text-back px-4 py-2 rounded  text-sm trans"
             >
               Back
             </Link>
             <button
               type="submit"
-              className="bg-primary trans hover:bg-primary/90 cursor-pointer text-grow px-5 py-1 rounded text-sm transition duration-300"
+              className="bg-primary trans hover:bg-primary/90 cursor-pointer text-back px-5 py-1 rounded text-sm trans"
             >
-              Save Changes
+              Save
             </button>
           </div>
         </div>

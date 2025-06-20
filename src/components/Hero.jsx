@@ -20,7 +20,7 @@ const Hero = ({ onSearch }) => {
         <h1 className="text-3xl text-center lg:text-5xl  md:text-3xl font-medium text-white">
           Welcome to our Recipe Collection!
         </h1>
-        <h4 className="text-center text-lg font-semibold text-white">
+        <h4 className="text-center text-lg sm:text-xl font-semibold text-white">
           Discover mouth watering recipes to satisfy your craving
         </h4>
       </div>

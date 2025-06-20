@@ -14,7 +14,7 @@ const About = () => {
         </div>
         <div className="md:w-[40vw]">
           <img
-            className="w-full"
+            className="w-full rounded"
             src="https://media.istockphoto.com/id/1419416519/photo/handsome-mature-man-tasting-the-food-he-is-preparing-in-the-kitchen-at-home.jpg?s=612x612&w=0&k=20&c=DazgoG8R7zxI7jSxtJExbua8JXH9KhzpCcGvkjYmBaw="
             alt=""
           />

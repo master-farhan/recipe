@@ -19,23 +19,23 @@ const Recipes = () => {
 
   return (
     <section className="px-4 lg:px-10 pb-20 pt-30 relative">
-      <h2 className="text-center font-semibold -ml-4 lg:-ml-10 text-primary absolute top-10 w-full text-2xl md:text-4xl">
+      <h2 className="text-center font-semibold -ml-4 lg:-ml-10 text-primary absolute top-10 w-full text-2xl md:text-5xl">
         Explore Our Delicious Recipes
       </h2>
 
-      <div className="flex justify-center items-center pb-10">
+      <div className="flex justify-center items-center pb-20">
         <form
           onSubmit={handleSubmit(submit)}
-          className="flex rounded border border-primary"
+          className="flex rounded "
         >
           <input
-            className="text-primary font-medium border-none px-5 py-1 outline-0 text-lg w-full sm:w-90"
+            className="text-back font-medium border border-accent focus:border-primary rounded-l px-5 py-1 outline-0 text-lg w-full sm:w-90"
             placeholder="Search recipe"
             {...register("search")}
           />
           <button
             type="submit"
-            className="bg-primary hover:bg-primary/90 px-5 py-1 cursor-pointer trans text-grow font-semibold"
+            className="bg-primary hover:bg-primary/90 px-5 py-1 cursor-pointer trans text-back font-semibold rounded-r"
           >
             Search
           </button>

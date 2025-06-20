@@ -86,7 +86,7 @@ const Create = () => {
             type="submit"
             className="cursor-pointer text-white px-6 py-2 rounded-md text-sm active:scale-95 bg-primary hover:bg-primary/90 trans"
           >
-            Save Update
+            Save Recipe
           </button>
         </div>
       </form>

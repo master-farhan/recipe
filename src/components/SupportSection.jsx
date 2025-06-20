@@ -39,7 +39,7 @@ const SupportSection = () => {
             <a
               key={index}
               href={option.link}
-              className="bg-grow p-6 rounded-2xl shadow hover:shadow-lg trans flex flex-col items-center text-center border border-transparent hover:border-primary"
+              className="p-6 rounded-2xl shadow hover:shadow-lg trans flex flex-col items-center text-center border border-transparent hover:border-primary"
             >
               <div className="text-primary mb-4">{option.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{option.title}</h3>

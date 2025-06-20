@@ -19,7 +19,7 @@ const RecipeDet = () => {
   };
 
   return recipe ? (
-    <section className="flex flex-col justify-between lg:flex-row overflow-auto p-[3%] relative w-screen md:min-h-3/5  lg:min-h-5/6">
+    <section className="flex flex-col justify-between lg:flex-row overflow-auto py-20 px-[3%] relative w-screen md:min-h-3/5  lg:min-h-5/6">
       <div className="h-60 lg:w-[36vw] lg:h-[55vh]">
         <img
           src={recipe.image}
@@ -36,14 +36,14 @@ const RecipeDet = () => {
 
         <Link
           to={`update`}
-          className="bg-primary hover:bg-primary/90 trans pt-1 pb-[5px] text-grow  px-5 rounded active:scale-98 mr-5 transition duration-300"
+          className="bg-primary hover:bg-primary/90 trans pt-1 pb-[5px] text-back  px-5 rounded active:scale-98 mr-5 transition duration-300"
         >
           Update
         </Link>
         <Link
           to="/recipes"
           onClick={deleteHandler}
-          className="bg-red-600 hover:bg-red-500 pt-1 pb-[5px] text-grow px-5 rounded active:scale-98 trans"
+          className="bg-red-600 hover:bg-red-500 pt-1 pb-[5px] text-back px-5 rounded active:scale-98 trans"
         >
           Delate
         </Link>
